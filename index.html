@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <!-- wrapper -->
+    <div
+      class="w-[100vw] h-[100vh] flex flex-col items-center justify-center bg-[#344151] gap-10"
+    >
+      <div
+        class="flex justify-center items-center flex-col gap-10 space-y-2 max-w-[400px]"
+      >
+        <div class="font-medium text-[20px] bg-amber-200 p-3 w-[100%] text-center">
+          Increment And Decrement
+        </div>
+
+        <div
+          class="bg-white w-[100%] flex text-[25px] justify-between items-center rounded-sm text-[#344151] gap-12 p-3 px-5"
+        >
+          <!-- decrement button -->
+          <button id="dec" class="border-r-2 border-[#bfbfbf] pr-5">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <div id="val" class="font-bold">0</div>
+          <!-- increment button -->
+          <button id="inc" class="border-l-2 border-[#bfbfbf] pl-5">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="flex flex-col w-[100%] space-y-3">
+          <!-- Inc by something -->
+          <div class="flex w-[100%]">
+            <input
+              type="number"
+              placeholder="Increment by: "
+              onfocus="this.placeholder=''"
+              onblur="this.placeholder='Increment by: '"
+              class="rounded-sm text-center p-2 px-6 font-medium w-[70%] outline-none border-none caret-[#636c72]"
+            />
+            <button
+              onclick="rangeIncrement()"
+              class="bg-red-500 rounded-sm text-center p-2 px-6 font-medium w-[30%]"
+            >
+              Update
+            </button>
+          </div>
+
+          <!-- Dec by something -->
+          <div class="flex w-[100%]">
+            <input
+              type="number"
+              placeholder="Decrement by: "
+              onfocus="this.placeholder=''"
+              onblur="this.placeholder='Decrement by: '"
+              class="rounded-sm text-center p-2 px-6 font-medium w-[70%] outline-none border-none caret-[#636c72]"
+            />
+            <button
+              onclick="rangeDecrement()"
+              class="bg-red-500 rounded-sm text-center p-2 px-6 font-medium w-[30%]"
+            >
+              Update
+            </button>
+          </div>
+
+          <!-- Clear  -->
+          <button
+            id="clr"
+            class="bg-orange-500 text-yellow text-xl rounded-sm text-center p-2 px-6 font-medium"
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/58a810656e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
